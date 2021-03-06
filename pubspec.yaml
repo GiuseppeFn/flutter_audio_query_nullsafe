@@ -1,0 +1,23 @@
+name: flutter_audio_query_nullsafe
+description: Nullsafe version of the package https://github.com/sc4v3ng3r/flutter_audio_query
+  from device storage.
+version: 0.0.1
+
+homepage: https://github.com/Trisha/flutter_audio_query_nullsafe
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+  flutter: "2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_plugin_android_lifecycle: ^1.0.6
+
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: boaventura.com.devel.br.flutteraudioquery
+        pluginClass: FlutterAudioQueryPlugin
