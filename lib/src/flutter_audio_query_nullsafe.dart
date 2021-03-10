@@ -434,29 +434,29 @@ class FlutterAudioQuery {
     });
   }
 
-  List<ArtistInfo> _parseArtistDataList(List<dynamic>? dataList) {
+  List<ArtistInfo>? _parseArtistDataList(List<dynamic>? dataList) {
     return dataList
         ?.map<ArtistInfo>((dynamic item) => ArtistInfo._(item))
         .toList();
   }
 
-  List<AlbumInfo> _parseAlbumDataList(List<dynamic>? dataList) {
+  List<AlbumInfo>? _parseAlbumDataList(List<dynamic>? dataList) {
     return dataList
         ?.map<AlbumInfo>((dynamic item) => AlbumInfo._(item))
         .toList();
   }
 
-  List<SongInfo> _parseSongDataList(List<dynamic>? dataList) {
+  List<SongInfo>? _parseSongDataList(List<dynamic>? dataList) {
     return dataList?.map<SongInfo>((dynamic item) => SongInfo._(item)).toList();
   }
 
-  List<GenreInfo> _parseGenreDataList(List<dynamic>? dataList) {
+  List<GenreInfo>? _parseGenreDataList(List<dynamic>? dataList) {
     return dataList
         ?.map<GenreInfo>((dynamic item) => GenreInfo._(item))
         .toList();
   }
 
-  List<PlaylistInfo> _parsePlaylistsDataList(List<dynamic>? dataList) {
+  List<PlaylistInfo>? _parsePlaylistsDataList(List<dynamic>? dataList) {
     return dataList
         ?.map<PlaylistInfo>((dynamic item) => PlaylistInfo._(item))
         .toList();
