@@ -59,7 +59,7 @@ class FlutterAudioQuery {
         await (channel.invokeMethod<List<dynamic>>('getArtists', {
       SOURCE_KEY: SOURCE_ARTIST,
       SORT_TYPE: sortType.index,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parseArtistDataList(dataList);
   }
 
@@ -74,7 +74,7 @@ class FlutterAudioQuery {
       SOURCE_KEY: SOURCE_ARTIST,
       'artist_ids': ids,
       SORT_TYPE: sortType.index,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
 
     return _parseArtistDataList(dataList);
   }
@@ -90,7 +90,7 @@ class FlutterAudioQuery {
       SOURCE_KEY: SOURCE_ARTIST,
       'genre_name': genre,
       SORT_TYPE: sortType.index,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parseArtistDataList(dataList);
   }
 
@@ -106,7 +106,7 @@ class FlutterAudioQuery {
       SOURCE_KEY: SOURCE_ARTIST,
       SORT_TYPE: sortType.index,
       QUERY_KEY: query
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parseArtistDataList(dataList);
   }
 
@@ -118,7 +118,7 @@ class FlutterAudioQuery {
         await (channel.invokeMethod<List<dynamic>>('getAlbums', {
       SOURCE_KEY: SOURCE_ALBUM,
       SORT_TYPE: sortType.index,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parseAlbumDataList(dataList);
   }
 
@@ -133,7 +133,7 @@ class FlutterAudioQuery {
       SOURCE_KEY: SOURCE_ALBUM,
       SORT_TYPE: sortType.index,
       "album_ids": ids,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
 
     return _parseAlbumDataList(dataList);
   }
@@ -149,7 +149,7 @@ class FlutterAudioQuery {
       SOURCE_KEY: SOURCE_ALBUM,
       'genre_name': genre,
       SORT_TYPE: sortType.index,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parseAlbumDataList(dataList);
   }
 
@@ -164,7 +164,7 @@ class FlutterAudioQuery {
       'artist': artist,
       SOURCE_KEY: SOURCE_ALBUM,
       SORT_TYPE: sortType.index,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parseAlbumDataList(dataList);
   }
 
@@ -180,7 +180,7 @@ class FlutterAudioQuery {
       SOURCE_KEY: SOURCE_ALBUM,
       SORT_TYPE: sortType.index,
       QUERY_KEY: query,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parseAlbumDataList(dataList);
   }
 
@@ -191,7 +191,7 @@ class FlutterAudioQuery {
         await (channel.invokeMethod<List<dynamic>>("getSongs", {
       SOURCE_KEY: SOURCE_SONGS,
       SORT_TYPE: sortType.index,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parseSongDataList(dataList);
   }
 
@@ -206,7 +206,7 @@ class FlutterAudioQuery {
       'artist': artistId,
       SOURCE_KEY: SOURCE_SONGS,
       SORT_TYPE: sortType.index,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
 
     return _parseSongDataList(dataList);
   }
@@ -227,7 +227,7 @@ class FlutterAudioQuery {
       'album_id': albumId,
       SOURCE_KEY: SOURCE_SONGS,
       SORT_TYPE: sortType.index,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parseSongDataList(dataList);
   }
 
@@ -249,7 +249,7 @@ class FlutterAudioQuery {
       'artist': artist,
       SOURCE_KEY: SOURCE_SONGS,
       SORT_TYPE: sortType.index,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parseSongDataList(dataList);
   }
 
@@ -265,7 +265,7 @@ class FlutterAudioQuery {
       SOURCE_KEY: SOURCE_SONGS,
       'genre_name': genre,
       SORT_TYPE: sortType.index,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parseSongDataList(dataList);
   }
 
@@ -278,7 +278,7 @@ class FlutterAudioQuery {
     List<dynamic> dataList = await (channel.invokeMethod<List<dynamic>>(
             "getSongsFromPlaylist",
             {SOURCE_KEY: SOURCE_SONGS, 'memberIds': playlist.memberIds})
-        as FutureOr<List<dynamic>>);
+        as FutureOr<List<dynamic>?>);
 
     return _parseSongDataList(dataList);
   }
@@ -297,7 +297,7 @@ class FlutterAudioQuery {
       SOURCE_KEY: SOURCE_SONGS,
       SORT_TYPE: sortType.index,
       'song_ids': ids,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parseSongDataList(dataList);
   }
 
@@ -313,7 +313,7 @@ class FlutterAudioQuery {
       SOURCE_KEY: SOURCE_SONGS,
       SORT_TYPE: sortType.index,
       QUERY_KEY: query
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parseSongDataList(dataList);
   }
 
@@ -324,7 +324,7 @@ class FlutterAudioQuery {
         await (channel.invokeMethod<List<dynamic>>('getGenres', {
       SOURCE_KEY: SOURCE_GENRE,
       SORT_TYPE: sortType.index,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parseGenreDataList(dataList);
   }
 
@@ -340,7 +340,7 @@ class FlutterAudioQuery {
       SOURCE_KEY: SOURCE_GENRE,
       SORT_TYPE: sortType.index,
       QUERY_KEY: query,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
 
     return _parseGenreDataList(dataList);
   }
@@ -354,7 +354,7 @@ class FlutterAudioQuery {
       SOURCE_KEY: SOURCE_PLAYLIST,
       PLAYLIST_METHOD_TYPE: PlayListMethodType.READ.index,
       SORT_TYPE: sortType.index
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
     return _parsePlaylistsDataList(dataList);
   }
 
@@ -371,7 +371,7 @@ class FlutterAudioQuery {
       PLAYLIST_METHOD_TYPE: PlayListMethodType.READ.index,
       QUERY_KEY: query,
       SORT_TYPE: sortType.index,
-    }) as FutureOr<List<dynamic>>);
+    }) as FutureOr<List<dynamic>?>);
 
     return _parsePlaylistsDataList(dataList);
   }
